@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MicroBreweryConsole
+namespace MicroBreweryLibrary
 {
     using System;
     using System.Collections.Generic;
