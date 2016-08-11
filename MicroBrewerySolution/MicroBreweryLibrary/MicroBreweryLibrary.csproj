@@ -60,6 +60,7 @@
     <Compile Include="Beertype.cs">
       <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomBeer.cs" />
     <Compile Include="MicroBrewery.cs">
       <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
     </Compile>
