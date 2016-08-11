@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E62C0F6-95DB-4125-BFB4-4E548C29269B}</ProjectGuid>
+    <ProjectGuid>{845627E8-6CF7-43C5-A98D-856446D810DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MicroBreweryLibrary</RootNamespace>
@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -29,9 +31,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,8 +51,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Beer.cs">
+      <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeerRating.cs">
+      <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Beertype.cs">
+      <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MicroBrewery.cs">
+      <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MicroBreweryEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MicroBreweryEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MicroBreweryEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MicroBreweryEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MicroBreweryEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MicroBreweryRating.cs">
+      <DependentUpon>MicroBreweryEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="MicroBreweryEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MicroBreweryEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MicroBreweryEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MicroBreweryEntity.edmx</DependentUpon>
+      <LastGenOutput>MicroBreweryEntity.Context.cs</LastGenOutput>
+    </None>
+    <None Include="MicroBreweryEntity.edmx.diagram">
+      <DependentUpon>MicroBreweryEntity.edmx</DependentUpon>
+    </None>
+    <None Include="MicroBreweryEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MicroBreweryEntity.edmx</DependentUpon>
+      <LastGenOutput>MicroBreweryEntity.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
