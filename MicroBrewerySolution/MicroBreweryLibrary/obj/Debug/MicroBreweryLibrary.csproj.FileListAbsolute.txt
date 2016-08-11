@@ -6,3 +6,11 @@ C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrew
 C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\obj\Debug\MicroBreweryLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\obj\Debug\MicroBreweryLibrary.dll
 C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\obj\Debug\MicroBreweryLibrary.pdb
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\bin\Debug\MicroBreweryLibrary.dll.config
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\bin\Debug\MicroBreweryLibrary.dll
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\bin\Debug\MicroBreweryLibrary.pdb
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\obj\Debug\MicroBreweryLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\obj\Debug\MicroBreweryLibrary.dll
+C:\Users\Student\Documents\GitHub\MicroBreweryApp\MicroBrewerySolution\MicroBreweryLibrary\obj\Debug\MicroBreweryLibrary.pdb
