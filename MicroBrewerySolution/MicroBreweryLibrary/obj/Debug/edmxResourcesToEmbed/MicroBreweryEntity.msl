@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MicroBreweryDatabaseModelStoreContainer" CdmEntityContainer="MicroBreweryDatabaseEntities">
+    <EntitySetMapping Name="BeerRatings">
+      <EntityTypeMapping TypeName="MicroBreweryDatabaseModel.BeerRating">
+        <MappingFragment StoreEntitySet="BeerRatings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="BeerId" ColumnName="BeerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beers">
+      <EntityTypeMapping TypeName="MicroBreweryDatabaseModel.Beer">
+        <MappingFragment StoreEntitySet="Beers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AlcoholPercentage" ColumnName="AlcoholPercentage" />
+          <ScalarProperty Name="BeerDescription" ColumnName="BeerDescription" />
+          <ScalarProperty Name="BrewedById" ColumnName="BrewedById" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="BeerTypeId" ColumnName="BeerTypeId" />
+          <ScalarProperty Name="TotalRatingValue" ColumnName="TotalRatingValue" />
+          <ScalarProperty Name="RatingCount" ColumnName="RatingCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beertypes">
+      <EntityTypeMapping TypeName="MicroBreweryDatabaseModel.Beertype">
+        <MappingFragment StoreEntitySet="Beertypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MicroBreweryRatings">
+      <EntityTypeMapping TypeName="MicroBreweryDatabaseModel.MicroBreweryRating">
+        <MappingFragment StoreEntitySet="MicroBreweryRatings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="MicroBreweryId" ColumnName="MicroBreweryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MicroBrewerys">
+      <EntityTypeMapping TypeName="MicroBreweryDatabaseModel.MicroBrewery">
+        <MappingFragment StoreEntitySet="MicroBrewerys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MicroBreweryDescription" ColumnName="MicroBreweryDescription" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TotalRatingValue" ColumnName="TotalRatingValue" />
+          <ScalarProperty Name="RatingCount" ColumnName="RatingCount" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="OpeningHours" ColumnName="OpeningHours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,8 @@
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\bin\Debug\MicroBreweryConsole.exe.config
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\bin\Debug\MicroBreweryConsole.exe
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\bin\Debug\MicroBreweryConsole.pdb
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\bin\Debug\EntityFramework.dll
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\bin\Debug\EntityFramework.xml
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\obj\Debug\MicroBreweryConsole.csprojResolveAssemblyReference.cache
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\obj\Debug\MicroBreweryConsole.exe
+C:\Users\Student\Documents\Visual Studio 2012\Projects\MicroBreweryApp\MicroBrewerySolution\MicroBreweryConsole\obj\Debug\MicroBreweryConsole.pdb

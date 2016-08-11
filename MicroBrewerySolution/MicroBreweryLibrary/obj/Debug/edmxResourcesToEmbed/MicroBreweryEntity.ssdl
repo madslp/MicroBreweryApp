@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MicroBreweryDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MicroBreweryDatabaseModelStoreContainer">
+    <EntitySet Name="BeerRatings" EntityType="MicroBreweryDatabaseModel.Store.BeerRatings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Beers" EntityType="MicroBreweryDatabaseModel.Store.Beers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Beertypes" EntityType="MicroBreweryDatabaseModel.Store.Beertypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MicroBreweryRatings" EntityType="MicroBreweryDatabaseModel.Store.MicroBreweryRatings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MicroBrewerys" EntityType="MicroBreweryDatabaseModel.Store.MicroBrewerys" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__BeerRatin__BeerI__1BC821DD" Association="MicroBreweryDatabaseModel.Store.FK__BeerRatin__BeerI__1BC821DD">
+      <End Role="Beers" EntitySet="Beers" />
+      <End Role="BeerRatings" EntitySet="BeerRatings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Beers__BeerTypeI__17F790F9" Association="MicroBreweryDatabaseModel.Store.FK__Beers__BeerTypeI__17F790F9">
+      <End Role="Beertypes" EntitySet="Beertypes" />
+      <End Role="Beers" EntitySet="Beers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Beers__BrewedByI__18EBB532" Association="MicroBreweryDatabaseModel.Store.FK__Beers__BrewedByI__18EBB532">
+      <End Role="MicroBrewerys" EntitySet="MicroBrewerys" />
+      <End Role="Beers" EntitySet="Beers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MicroBrew__Micro__1EA48E88" Association="MicroBreweryDatabaseModel.Store.FK__MicroBrew__Micro__1EA48E88">
+      <End Role="MicroBrewerys" EntitySet="MicroBrewerys" />
+      <End Role="MicroBreweryRatings" EntitySet="MicroBreweryRatings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BeerRatings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="BeerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Beers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AlcoholPercentage" Type="float" />
+    <Property Name="BeerDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="BrewedById" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="BeerTypeId" Type="int" Nullable="false" />
+    <Property Name="TotalRatingValue" Type="int" />
+    <Property Name="RatingCount" Type="int" />
+  </EntityType>
+  <EntityType Name="Beertypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="MicroBreweryRatings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="MicroBreweryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MicroBrewerys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MicroBreweryDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="TotalRatingValue" Type="int" />
+    <Property Name="RatingCount" Type="int" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Location" Type="varchar" MaxLength="255" />
+    <Property Name="OpeningHours" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__BeerRatin__BeerI__1BC821DD">
+    <End Role="Beers" Type="MicroBreweryDatabaseModel.Store.Beers" Multiplicity="1" />
+    <End Role="BeerRatings" Type="MicroBreweryDatabaseModel.Store.BeerRatings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BeerRatings">
+        <PropertyRef Name="BeerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Beers__BeerTypeI__17F790F9">
+    <End Role="Beertypes" Type="MicroBreweryDatabaseModel.Store.Beertypes" Multiplicity="1" />
+    <End Role="Beers" Type="MicroBreweryDatabaseModel.Store.Beers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beertypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Beers">
+        <PropertyRef Name="BeerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Beers__BrewedByI__18EBB532">
+    <End Role="MicroBrewerys" Type="MicroBreweryDatabaseModel.Store.MicroBrewerys" Multiplicity="1" />
+    <End Role="Beers" Type="MicroBreweryDatabaseModel.Store.Beers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MicroBrewerys">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Beers">
+        <PropertyRef Name="BrewedById" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MicroBrew__Micro__1EA48E88">
+    <End Role="MicroBrewerys" Type="MicroBreweryDatabaseModel.Store.MicroBrewerys" Multiplicity="1" />
+    <End Role="MicroBreweryRatings" Type="MicroBreweryDatabaseModel.Store.MicroBreweryRatings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MicroBrewerys">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MicroBreweryRatings">
+        <PropertyRef Name="MicroBreweryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
